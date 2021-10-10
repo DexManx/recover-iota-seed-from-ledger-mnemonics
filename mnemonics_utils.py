@@ -83,10 +83,10 @@ def InputPassphrase():
 
 #===============================================================================
 def InputLedgerStartIndex():
-    print("\nPlease enter ledger start index (Trinity default 0):")
+    print("\nPlease enter ledger account index (Trinity default 0):")
 
     try:
-        return input("   Ledger start index: ")
+        return input("   Ledger account index: ")
     except KeyboardInterrupt:
         return None
 
