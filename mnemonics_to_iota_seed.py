@@ -21,8 +21,11 @@ def RecoverSeed():
     # iota_seed = MnemonicsToIotaSeed(recovery_words, passphrase, 1)
     # print("Seed: %s, Length: %d" % (iota_seed, len(iota_seed)))
 
-    SearchLedgerIndexByTargetAddress(recovery_words, passphrase, 1, 1, 0, 0, 3,
-                                     "AXWJBOBKCY9BXYELWRVAFUQYVLPRJIVADOSUPHEMDEF9YRXQYEO9OZXFTLVYDYITKKUQEOJIPRLAXXVXD")
+    with open("afile.txt", "r") as f:
+        for line in f:
+            passphrase = line.rstrip()
+            SearchLedgerIndexByTargetAddress(recovery_words, passphrase, 1, 1, 0, 0, 1,
+                                     "GZADCLMGXWNUJOAMOAHHGSESJFXUNMKXY9AWBQAK9FSTLNVLLBJDYQSF9XDPFKU9FBVWMJ9FNUNMSQPFC")
 
 
 # ===============================================================================
