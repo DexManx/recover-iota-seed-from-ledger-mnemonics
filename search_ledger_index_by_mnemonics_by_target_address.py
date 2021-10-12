@@ -25,8 +25,8 @@ def SearchLedgerIndexByTargetAddress(recovery_words, passphrase, ledger_start_in
 
                 print("\n      Found address (seed: %s, ledger index: %d, ledger page: %d, address index: %d" % (iota_seed, ledger_index, ledger_page, address_index))
                 print("\n      Your Address: %s" % (addresses[address_index]))
-                print("\n                    https://explorer.iota.org/mainnet/address/%s" % (addresses[address_index][:81]))
-                return
+                print("\n      Your Passphrase %s" % (passphrase))
+                quit()        # return
 
             print("      no funds found!")
 
